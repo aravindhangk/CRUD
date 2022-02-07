@@ -1,0 +1,11 @@
+﻿show databases;
+create database crud;
+use crud;
+create table users(
+ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(50),
+AGE INT,
+CITY VARCHAR(50)
+);
+SHOW TABLES;
+SELECT * FROM USERS;

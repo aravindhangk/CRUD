@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<tittle>Aravindhan</tittle>
+	</head>
+	<body>
+		<h1>User managment using python flask & Mysql</h1>
+		<p><a href="{{url_for('addUser')}}">Add User</a></p>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>CITY</th>
+				<th>EDIT</th>
+				<th>DELETE</th>
+			</tr>
+			{% for data in datas %}
+				<tr>
+					<td>{{data.ID}}</td>
+					<td>{{data.NAME}}</td>
+					<td>{{data.AGE}}</td>
+					<td>{{data.CITY}}</td>
+					<td><a href="{{url_for('editUser',id=data.ID)}}">Edit</a></td>
+					<td><a href="{{url_for('deleteUser',id=data.ID)}}">Delete</a></td>
+				<tr>
+			{% endfor %}
+		</table>
+	<body>
+<html>
+	
